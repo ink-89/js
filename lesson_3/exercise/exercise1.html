@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// 1. З клавіатури вводяться імена двох дітей та кількість у них цукерок. 
+// Вивести не екран ім’я тієї дитини, у якої кількість цукерок є більшою, 
+// або вивести, що кількість однакова.																				
+// 0. Вводимо позначення
+// І'мя першої дитини - firstСhildsName
+// І'мя першої дитини - secondСhildsName
+// Загальна кількість цекурок 1ої дитини- amountOfCandiesFirstСhild
+// Загальна кількість  цекурок 2ої дитини - amountOfCandiesSecondСhild
+// Результат - result
+// 1. Введення велечини
+let firstСhildsName = (prompt('Вкажіть ім"я першої дитини:'))
+let secondСhildsName = (prompt('Вкажіть ім"я другої дитини:'))
+let amountOfCandiesFirstСhild = parseInt(prompt('Вкажіть кількість цукерок першої дитини:'))
+let amountOfCandiesSecondСhild = parseInt(prompt('Вкажіть вашу кількість цукерок другої дитини:'))
+// 2. Розв'язання задачі
+if (amountOfCandiesFirstСhild>amountOfCandiesSecondСhild) 
+alert(`Кількість цукерок у ${firstСhildsName} більше`)
+else if (amountOfCandiesSecondСhild>amountOfCandiesFirstСhild) 
+alert(`Кількість цукерок у ${secondСhildsName} більше`)
+else if (amountOfCandiesSecondСhild===amountOfCandiesFirstСhild) 
+alert('Кількість цукерок у вас однакова, перемогла дружба!')
+else
+alert('Ви вказали некоректні дані')
+</script>
+ </main>
+</body>
+</html>

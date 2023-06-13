@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// 2. З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей 
+// не вистачає то відмовляємо у покупці, інакше, якщо ще залишаються гроші, 
+// то пропонуємо купити лотерею за 4 грн.
+// 0. Вводимо позначення
+// Ціна товару - price
+// Кількість грошей - amountOfMoney
+// Залишок грошей - balanceOfMoney
+// 1. Введення велечини
+let price = parseFloat(prompt('Вкажіть ціну вашого товару'))
+let amountOfMoney = parseFloat(prompt('Вкажіть кіл-ть грошей'))
+let balanceOfMoney = amountOfMoney-price
+// 2. Розв'язання задачі
+if (price>amountOfMoney)
+alert ('Вибачаємось, недостатьо коштів')
+else if (balanceOfMoney>=4){
+if (confirm ('Пропонуємо купити у нас лотерею за 4грн')) 
+alert('Дякуємо за покупкулю товару і лотереї')
+else alert('Дякуємо за покупку')}
+</script>
+ </main>
+</body>
+</html>

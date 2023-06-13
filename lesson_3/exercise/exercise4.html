@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// 4. З клавіатури вводиться вік людини. Вивести на екран ким він є 
+// (дитиною у садочку, школярем, студентом, працівником, пенсіонером).
+// 0. Вводимо позначення
+// Дитина - child
+// Школяр - choolchild
+// Студентом - student
+// Працівником - worker
+// Пенсіонером - pensioner
+// Вік - userAge
+// 1. Введення велечини
+let userAge = parseInt(prompt('Вкажіть скільки вам повних років:'))
+let result
+if (userAge >= 1 && userAge < 2) alert("Ви ще зовсім малеча")
+else if (userAge >= 2 && userAge < 7) alert("Ви дитина, що ходить у садочок")
+else if (userAge >= 7 && userAge < 17) alert("Ви школяр")
+else if (userAge >= 17 && userAge < 21) alert("Ви студент")
+else if (userAge >= 21 && userAge < 60) alert("Ви працівник")
+else if (userAge >= 60 && userAge < 110) alert("Ви пенсіонер")
+else alert('Некоректні дані')
+</script>
+ </main>
+</body>
+</html>

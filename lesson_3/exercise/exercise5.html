@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// 5. З клавіатури вводиться назва категорії водія 
+// (А-мотоцикл, В-легковий автомобіль, С-вантажний автомобіль). 
+// Вивести на екран назву транспортного засобу, яким він може керувати
+let userCategory = prompt('Вкажіть назву вашу категорію: "A", "B" або "C"')
+let result
+switch (userCategory) {
+	case 'A': result = 'Ваша категорія - мотоцикл'
+		break
+	case 'B': result = 'Ваша категорія - легковий автомобіль'
+		break
+	case 'C': result = 'Ваша категорія - вантажний автомобіль'
+		break
+	default: result = 'Ви вказалі невірну категорію! Переконайтесь, що у вас англійська розкладка, та ви вказуєте великі літери'
+		break
+}
+alert(result)
+</script>
+ </main>
+</body>
+</html>

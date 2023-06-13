@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// 6. З клавіатури вводиться номер дня тижня. Вивести на екран назву дня
+let dayOfNumber = parseInt(prompt('Вкажіть номер дня тижня, наприклад: понеділок - 1'))
+let res
+switch (dayOfNumber) {
+case 1: res = 'Ви вказали понеділок'
+		break
+case 2: res = 'Ви вказали вівторок'
+		break
+case 3: res = 'Ви вказали середу'
+		break
+case 4: res = 'Ви вказали четвер'
+		break
+case 5: res = 'Ви вказали п"ятницю'
+		break
+case 6: res = 'Ви вказали суботу'
+		break
+case 7: res = 'Ви вказали неділю'
+		break
+	default: res = 'Ви вказалі невірний номер! Зверніть уваги, що номер потрібно вказати від 1 до 7'
+	break
+}
+alert(res)
+
+</script>
+ </main>
+</body>
+</html>
