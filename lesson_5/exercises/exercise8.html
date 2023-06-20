@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// Задача 8. Користувач загадує число. За 3 спроби комп’ютер 
+// намагається вгадати число користувача (використати confirm).
+alert('Загадайте число від 1 до 10')
+for (let chance = 1; chance <= 3; chance++){
+	let randomNumber = 1 + Math.floor(Math.random()*10)
+	 let answer = (confirm(`це число ${randomNumber}?`))
+if (answer) {
+	alert('Бачиш, як вмію читати думки :)')
+	break
+}
+else continue
+alert('Нажаль, не вгадав :)')
+}
+</script>
+ </main>
+</body>
+</html>

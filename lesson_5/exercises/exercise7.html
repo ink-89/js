@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// Задача 7. Вивести на екран N абзаців (N вводиться користувачем) 
+// за зразком:
+let userNumber = parseInt(prompt('Вкажіть кількість абзаців'))
+let result=""
+for (let section = 1; section <= userNumber; section++) {
+	result+=`<h1> Зоголовок ${section} </h1>`;
+	for (let paragraph = 1; paragraph <= section; paragraph++) {
+		result+=`<p> Розділ ${section}, параграф ${paragraph} </p>`;
+}
+}
+document.write(`${result}`);
+</script>
+ </main>
+</body>
+</html>

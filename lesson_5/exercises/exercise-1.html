@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// Задача -1. Вивести на екран номери місяців весни і літа 
+// (від 3 до 8)
+// for (let num = 3; num <= 8; num++){
+// 	document.write(`<li> ${num} </li>`)
+// }
+let totalSum = parseInt(prompt('Ведіть суму до сплати')) 
+
+do {
+	let userPay = parseInt(prompt('Ведіть скільки коштів Ви платите')) 
+	totalSum -= userPay
+	if (totalSum >0){
+		alert(`Вам залишилося ввести ${totalSum}` )
+	} else
+					alert("Дякуємо за покупку!")
+			} while (totalSum > 0);
+
+
+
+	// let totalSum = 3000
+	// 	// Повідомляємо суму клієнту
+	// 	alert(`Сума покупки складає ${totalSum} грн`)
+	// 	do {
+	// 		let userSum = parseFloat(prompt(`Введіть суму, яку Ви хочете сплатити`))
+	// 		totalSum -= userSum
+	// 			if(totalSum > 0){
+	// 				alert(`Вам залишилось внести ${totalSum} грн.`)
+	// 			} else
+	// 				alert("Дякуємо за покупку!")
+	// 		} while (totalSum > 0);
+
+	
+</script>
+ </main>
+</body>
+</html>
