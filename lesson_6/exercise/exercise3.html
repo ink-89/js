@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// 5. Інвестор вклав S тис. грн на 20 років під 20% річних. 
+// Визначити за допомогою циклів суму, яку S він одержить (без оподаткування).
+const yearRate = 0.2
+let depositSum = parseInt(prompt('Вкажіть суму вашого депозиту'))
+for (let year = 1; year <= 20;year++) {
+let res=yearRate*depositSum*year
+document.write(`Рік ${year}: ${res+depositSum} <br>`)
+}
+</script>
+ </main>
+</body>
+</html>
