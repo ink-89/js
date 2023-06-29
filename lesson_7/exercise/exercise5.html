@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// Задача 5. Створити окремі функції, які переводять:
+// Сантиметри у дюйми;
+// Кілограми у фунти;
+// Кілометри у милі.
+
+function lengthConverter() {
+	return centimeter/2.54
+}
+function massConverter(){
+	return kilogram*2.2
+}
+function distanceConverter(){
+	return kilometer*0.62
+}
+
+let centimeter = parseInt(prompt('Вкажіть кіль-ть сантиметрів, а я їх перевебу у дюйми '))
+let kilogram = parseInt(prompt('Вкажіть кіль-ть кілограм, а я їх перевебу у фунти '))
+let kilometer = parseInt(prompt('Вкажіть кіль-ть кілометрів, а я їх перевебу у милі '))
+let resLengthConverter = lengthConverter()
+let resMassConverter = massConverter()
+let resDistanceConverter = distanceConverter()
+
+document.write(`${centimeter}cм = ${resLengthConverter.toFixed(2)}дюймів <br>`)
+document.write(`${kilogram}кг = ${resMassConverter.toFixed(2)}фунтів <br>`)
+document.write(`${kilometer}км = ${resDistanceConverter.toFixed(2)}миль <br>`)
+</script>
+ </main>
+</body>
+</html>

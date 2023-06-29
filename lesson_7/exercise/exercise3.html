@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// Задача 3. Створити окремі функції, які для 4 чисел знаходять:
+// 1)суму;
+// 2)добуток;
+// 3)середнє арифметичне;
+// 4)мінімальне значення. 
+let userNum1= parseInt(prompt('Введіть перше число'))
+let userNum2= parseInt(prompt('Введіть друге число'))
+let userNum3= parseInt(prompt('Введіть третє число'))
+let userNum4= parseInt(prompt('Введіть четверте число'))
+function getSumOfNum(num1,num2, num3, num4 ) {
+	return (num1+num2+num3+num4)
+
+}
+function getProdOfNum(num1,num2, num3, num4 ) {
+	return (num1*num2*num3*num4)
+
+}
+function getAvarOfNum(num1,num2, num3, num4 ) {
+	return((num1+num2+num3+num4) /4)
+	
+}
+function getMinOfNum(num1,num2, num3, num4 ) {
+	return (Math.min(num1,num2, num3, num4))
+	
+}
+let resOfSum= getSumOfNum (userNum1,userNum2, userNum3, userNum4)
+let resOfProd= getProdOfNum (userNum1,userNum2, userNum3, userNum4)
+let resOfAvar= getAvarOfNum (userNum1,userNum2, userNum3, userNum4)
+let resOfMin= getMinOfNum (userNum1,userNum2, userNum3, userNum4)
+
+document.write(`Результат додавання 4 цифр=${resOfSum} <br>`)
+document.write(`Результат добутку 4 цифр=${resOfProd} <br>`)
+document.write(`Результат середнього арифметичного 4 цифр=${resOfAvar}<br>`)
+document.write(`Результат мінімального значення із 4 цифр=${resOfMin}<br>`)
+</script>
+ </main>
+</body>
+</html>

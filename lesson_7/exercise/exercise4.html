@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// Задача 4. Створити функцію, яка для 3 заданих чисел 
+// знаходить одночасно декілька результатів: кількість парних, 
+// кількість додатних, кількість більших за 100.
+let number1 = parseInt(prompt('Вкажіть перше число'))
+let number2 = parseInt(prompt('Вкажіть друге число'))
+let number3 = parseInt(prompt('Вкажіть третє число'))
+let evenNumber = 0
+let addNumber = 0
+let moreThan100 = 0
+function calculation(number1, number2, number3){
+// кількість парних
+	if (number1% 2 === 0)
+	evenNumber++
+	if (number2% 2 === 0)
+	evenNumber++
+	if (number3% 2 === 0)
+	evenNumber++
+// кількість додатних
+	if (number1>0)
+	addNumber++
+	if (number2>0)
+	addNumber++
+	if (number3>0)
+	addNumber++
+// кількість більших за 100.
+	if (number1>100)
+	moreThan100++
+	if (number2>100)
+	moreThan100++
+	if (number3>100)
+	moreThan100++
+}
+calculation(number1, number2, number3)
+document.write(`кіл-ть парних: ${evenNumber} <br> кіл-ть доданих: ${addNumber} <br> кіл-ть більших за 100: ${moreThan100} <br>`)
+
+
+
+</script>
+ </main>
+</body>
+</html>
