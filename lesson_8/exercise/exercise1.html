@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// Задача 1. Дано масив, який містить оцінки з К предметів.
+//  Знайти середній бал і з’ясувати до якої категорії він відноситься
+//   (відмінник, двійочник (має хоча би одну двійку), хорошист (оцінки добре і відмінно), трійочник(є хоча би одна трійка)).
+
+let scores=[]
+let subjects = parseInt(prompt(`Введіть кількість предметів`))
+function userScores(subjects) {
+	for (let i = 0; i < subjects; i++) {
+		let subjectsScores= parseInt(prompt(`Введіть оцінку за ${i+1} предмет`))
+		scores.push(subjectsScores)	
+	}
+	return scores
+}
+let resUserScores =userScores(subjects) 
+document.write(` Оцінки з предметів: ${resUserScores} <br>`)
+
+function averageScores(scores) {
+	let sum =0
+	let count=0
+	for (let i = 0; i < scores.length; i++) {
+		sum+=scores[i]
+		count++
+	}
+	return sum/count
+}
+let resAverageScores =averageScores(scores)
+document.write(` Середня оцінка: ${resAverageScores.toFixed(2)}<br>`)
+
+function getMinScore(scores) {
+	let minScore = scores [0]
+for (let i = 0; i < scores.length; i++) {
+if (minScore>scores [i]) 
+minScore=scores [i]
+	}
+	return minScore
+}
+
+
+function getCategory(minScores) {
+	let  category
+            switch (getMinScore(scores)) {
+            case 1:
+          case 2:
+            category = 'двійочник'
+            break
+          case 3:
+            category = 'трійочник'
+            break
+          case 4:
+            category = 'хорошист'
+            break
+          case 5:
+            category = 'відмінник'
+            break
+				default:
+      break
+        }
+        return category
+      }
+		let resCategory =getCategory(scores) 
+document.write(` Ваша категорія: ${resCategory}<br>`)
+
+</script>
+ </main>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// Задача 4. Дано послідовність платіжок протягом року. Знайти сумарну кількість грошей за:
+// за весь рік;
+// у першій половині року;
+// у другій половині року;
+// за літо;
+// за ІІ квартал;
+// за парні місяці (з парними номерами);
+// за місяці, які є початковими у сезоні (весна, літо, осінь, зима).
+let payments = []
+function moneyCalc(){
+for (let i = 0; i < 12; i++) {
+	let userPayment = parseFloat(prompt(`Вкажіть суму за ${i} місяць`))
+	payments.push(userPayment)
+}
+return payments
+}
+let res = moneyCalc()
+document.write(`Ваші дані: ${res}<br>`)
+
+// Сума за рік
+function paymentsForOneYear() {
+	let sum = 0
+	for (let i = 0; i < 12; i++) {
+		sum+=payments[i]
+	}
+	return sum
+}
+let resOfOneYear = paymentsForOneYear()
+
+// Сума за першу половину року;
+function paymentsForFirstHalfYear() {
+	let sum = 0
+	for (let i = 0; i < 6; i++) {
+		sum+=payments[i]
+	}
+	return sum
+}
+let resOfFirstHalfYear = paymentsForFirstHalfYear()
+
+// Сума за другу половину року;
+function paymentsForSecondHalfYear() {
+	let sum = 0
+	for (let i = 6; i < 12; i++) {
+		sum+=payments[i]
+	}
+	return sum
+}
+let resOfSecondHalfYear = paymentsForSecondHalfYear()
+
+// Сума за літо;
+function paymentsForSummer() {
+	let sum = 0
+	for (let i = 5; i < 8; i++) {
+		sum+=payments[i]
+	}
+	return sum
+}
+let resOfSummer = paymentsForSummer()
+
+// Сума за 2 квартал;
+function paymentsForSecondQuarter() {
+	let sum = 0
+	for (let i = 3; i < 6; i++) {
+		sum+=payments[i]
+	}
+	return sum
+}
+let resOfSecondQuarter = paymentsForSecondQuarter()
+
+
+// Сума  за парні місяці (з парними номерами);
+function paymentsForPairedNumbers() {
+	let sum = 0
+	for (let i = 0; i < 12; i++) {
+		if(i%2===0&&i>0)
+		sum+=payments[i]
+	}
+	return sum
+}
+let resOfPairedNumbers = paymentsForPairedNumbers()
+
+
+// Сума  за місяці, які є початковими у сезоні (весна, літо, осінь, зима).
+function paymentsForStartOfSeasons() {
+	let sum = 0
+	for (let i = 0; i < 12; i++) {
+		if(i===2||i===5||i===8||i===11)
+		sum+=payments[i]
+	}
+	return sum
+}
+let resOfStartOfSeasons = paymentsForStartOfSeasons()
+document.write(`Сума за рік: ${resOfOneYear}<br>`)
+document.write(`Сума за першу половину року: ${resOfFirstHalfYear}<br>`)
+document.write(`Сума за другу половину року: ${resOfSecondHalfYear}<br>`)
+document.write(`Сума за літо: ${resOfSummer}<br>`)
+document.write(`Сума за 2 квартал: ${resOfSecondQuarter}<br>`)
+document.write(`Сума за парні місяці: ${resOfPairedNumbers}<br>`)
+document.write(`Сума за місяці, які є початковими у сезоні (весна, літо, осінь, зима): ${resOfStartOfSeasons}<br>`)
+
+</script>
+ </main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// Задача 3. Дано послідовність цін товарів та назв (у окремих масивах). 
+// Вивести на екран ті, які може собі дозволити користувач 
+// (кількість грошей задається).
+let productsPrices = [25, 80, 20, 15]
+let products = ['горішки', 'олія', 'морозиво', 'хліб']
+let userMoney = parseFloat(prompt('Вкажіть суму грошей:'))
+document.write(`Список ваших товарів: <br>`)
+function productsThatCanBought(productsPrices, userMoney){
+	for (let i = 0; i < productsPrices.length; i++) {
+		if(userMoney>productsPrices[i])
+		document.write(`${products[i]} - ${productsPrices[i]}<br>`)
+	}
+}
+productsThatCanBought(productsPrices, userMoney)
+</script>
+ </main>
+</body>
+</html>
