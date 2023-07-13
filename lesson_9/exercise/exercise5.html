@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// Задача 5. Дано масив елементів. 
+// Усі елементи, які більші за перший елемент помножити на 2
+let arr = [10, 20, 5, 12, 4, 15]
+arr.forEach((element, ind, mas)=>{
+	element>mas[0]?element*=2:element
+	document.write(element+`<br>`)
+}
+)
+
+
+
+</script>
+ </main>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// Задача 2. Користувач вводить кількість елементів. Створити масив, у якому 
+// перша половина заповнена 1-цями, а друга заповнена 7-ками.
+let userNumber = parseInt(prompt('Вкажіть кількість елементів, яку потрібно створити'))
+let halfOfUserNumber = userNumber/2
+let arr = new Array(userNumber).fill(1, 0, halfOfUserNumber)
+arr.fill(7,halfOfUserNumber)
+document.write(arr)
+</script>
+ </main>
+</body>
+</html>

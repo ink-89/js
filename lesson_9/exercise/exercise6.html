@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// Задача 6. Дано масив цін. Змінити цей масив так, що на ціни товарів, 
+// які більші за 1000 грн. дати 30% знижки.
+let arr = [1010, 1020, 1005, 120, 400, 1500]
+arr.forEach((element, ind, mas)=>{
+	element>1000?element-=element/100*30:element
+	document.write(element+`<br>`)
+}
+)
+
+
+
+</script>
+ </main>
+</body>
+</html>
