@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// Задача 4. Сформувати новий масив, що міститиме значення цін у відсотках стосовно максимального
+const daysNumbers = 30
+let prices = new Array(daysNumbers)
+.fill(0).map(()=>1+Math.floor(Math.random()*10000))
+document.write(`Масив від 1 до 10000: ${prices}<br>`)
+let maxPrice = prices.reduce((prevMax, el)=>(el>prevMax?el:prevMax))
+let percent = prices.map((price)=>(price*100)/maxPrice)
+let percentForPrint = percent.map((print)=>print.toFixed(2))
+document.write(`Макс значення: ${maxPrice}<br>`)
+document.write(`Відсотки: ${percentForPrint}<br>`)
+</script>
+ </main>
+</body>
+</html>

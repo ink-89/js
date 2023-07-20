@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// Задача 3. Сформувати список з тих цін, які більші за попереднє значення
+const daysNumbers = 30
+let prices = new Array(daysNumbers)
+.fill(0).map(()=>1+Math.floor(Math.random()*10000))
+document.write(`Масив від 1 до 10000: ${prices}<br>`)
+
+let priceMoreThenPrev = prices.filter((price, index) => price > prices[index - 1])
+document.write(`Масив новий у якому є номери тільки тих, що більші за 1000: ${priceMoreThenPrev}<br>`)
+
+
+</script>
+ </main>
+</body>
+</html>

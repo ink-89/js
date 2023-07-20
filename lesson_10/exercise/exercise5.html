@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// Задача 5. Підрахувати кількість змін цін
+const daysNumbers = 30
+let prices = new Array(daysNumbers)
+.fill(0).map(()=>1+Math.floor(Math.random()*10000))
+document.write(`Масив від 1 до 10000: ${prices}<br>`)
+let countPricesChanges = prices.reduce((prevPrice, price)=>prevPrice+1,0)
+document.write(`Кіл-ть цін: ${countPricesChanges}<br>`)
+</script>
+ </main>
+</body>
+</html>
