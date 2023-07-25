@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+
+
+// -----------------2 Р О З Д І Л--------------------
+
+// Дано інформацію про прибуток К магазинів протягом тижня.Знайти
+const minValue = 1
+const maxValue = 10
+let rowsNumber = parseInt(prompt('Вкажіть кіль-ть магазинів'))
+let columnsNumber = 7
+
+// ---------------функція генерування випадкових чисел
+function getRandomNumber(minValue, maxValue) {
+	return minValue+Math.floor(Math.random()*(maxValue-minValue+1))
+}
+// ---------------функція генерування одного одновимірного масиву (одного рядка)
+function generateRandomArray(arrayLength, minValue, maxValue) {
+	const arr=[]
+	for (let i = 0; i < arrayLength; i++) {
+		const randNum = getRandomNumber(minValue, maxValue)
+		arr.push(randNum)
+	}
+	return arr
+}
+// -------------функція генерування двовимірного масиву (двовиірної таблиці даних)
+function generateRandomTable(rowsNumber, columnsNumber, minValue, maxValue) {
+	const table = []
+	for (let i = 0; i < rowsNumber; i++) {
+		const randomRow = generateRandomArray(columnsNumber, minValue, maxValue);
+		table.push(randomRow)
+	}
+	return table
+}
+// -----------функція розрахунку прибутку магазинів за тиждень
+function getTotalShopProfit(table) {
+	let sum=0
+	for (let rowsNumber = 0; rowsNumber < table.length; rowsNumber++) {
+		for (let columnsNumber = 0; columnsNumber < table[rowsNumber].length; columnsNumber++) {
+			sum+=table[rowsNumber][columnsNumber]
+		}
+	}
+	return sum
+}
+// -------вивід------
+let table = generateRandomTable(rowsNumber, columnsNumber, minValue, maxValue)
+document.write(`Прибуток магазинів по днях: <br>${table}<br>`)
+let totalShopsProfit=getTotalShopProfit(table)
+document.write(`Загальна сума: ${totalShopsProfit}<br>`)
+
+// ---------прибуток магазину за тиждень
+let profitOfEachShops=[]
+for (let shopIndex = 0; shopIndex < table.length; shopIndex++) {
+	let profit=0
+	for (let day = 0; day < table[shopIndex].length; day++) {
+		profit+=table[shopIndex][day]
+	}
+	profitOfEachShops.push(profit)
+}
+document.write(`Загальна сума прибутку кожного магазину за тиждень: ${profitOfEachShops}<br>`)
+
+// -----------------загальний прибуток усіх магазинів по дням (загальний прибуток усіх магазинів за Пн, Вт, і т.д)
+
+let totalProfitOf1Day=table.reduce((prevTotalDay,el)=>{
+	el.forEach((tab,index)=>{
+		prevTotalDay[index]+=tab;
+	});
+	return prevTotalDay
+},[0,0,0,0,0,0,0])
+let totalProfit=(totalProfitOf1Day)
+document.write(`Загальний прибуток усіх магазинів по дням: ${totalProfitOf1Day}<br>`)
+
+
+// ---------------------загальний прибуток за робочі дні
+let profitWorkDay=0
+for (let shopIndex = 0; shopIndex< table.length; shopIndex++) {
+	for (let day = 0; day <= 4; day++) {
+		profitWorkDay+=table[shopIndex][day]
+	}
+	
+}
+document.write(`Загальна сума прибутку кожного магазину за робочі дні: ${profitWorkDay}<br>`)
+// ---------------------загальний прибуток за вихідні дні
+let profitDaysOff=0
+for (let shopIndex= 0; shopIndex < table.length; shopIndex++) {
+	for (let daysOffIndex = 5; daysOffIndex <= 6; daysOffIndex++) {
+		profitDaysOff+=table[shopIndex][daysOffIndex]
+	}
+}
+document.write(`Загальна сума прибутку за вихідні дні: ${profitDaysOff}<br>`)
+
+
+// ------------------ максимальний прибуток за середу
+// 5) максимальний прибуток за середу
+
+let maxProfitOfWednesday=-Infinity
+table.forEach((element)=>element[2]>maxProfitOfWednesday?maxProfitOfWednesday=element[2]:maxProfitOfWednesday)
+document.write(`Максимальний прибуток за середу: ${maxProfitOfWednesday}<br>`)
+</script>
+ </main>
+</body>
+</html>

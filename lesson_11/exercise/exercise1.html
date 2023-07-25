@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+//  Задача 0. Задача 1. Знайти суми елементів у вказаній області.
+
+let arr = [
+//  0  1  2  3  4  5 
+	[1, 2, 3, 4, 5, 6], // 0
+	[6, 7, 8, 9, 1, 2], // 1
+	[3, 4, 5, 6, 7, 8], // 2
+	[9, 1, 2, 3, 4, 5], // 3
+]
+// Задача 1. Знайти суми елементів у вказаній області
+let sumFirstZone = 0
+for (let rowIndex = 0; rowIndex <= 1; rowIndex ++) {
+for (let columnIndex = 0; columnIndex <= 2; columnIndex++) {
+	sumFirstZone+=arr[rowIndex][columnIndex];
+}	
+}
+document.write(`Сума елементів у 1ій вказаній області: ${sumFirstZone}<br>`)
+
+// Задача 2. Знайти суми елементів у вказаній області
+let sumSecondZone = 0
+for (let rowIndex = 0; rowIndex <=1; rowIndex++) {
+	for (let columnIndex = 3; columnIndex <= 5; columnIndex++) {
+		sumSecondZone+=arr[rowIndex][columnIndex];
+	}
+}
+document.write(`Сума елементів у 2ій вказаній області: ${sumSecondZone}<br>`)
+
+// Задача 3. Знайти суми елементів у вказаній області
+let sumThirdZone = 0
+for (let rowIndex  = 2; rowIndex  <=3; rowIndex ++) {
+	for (let columnIndex = 0; columnIndex <=2; columnIndex++) {
+		sumThirdZone+=arr[rowIndex][columnIndex]
+	}
+}
+document.write(`Сума елементів у 3ій вказаній області: ${sumThirdZone}<br>`)
+
+// Задача 4. Знайти суми елементів у вказаній області
+let sumFourthZone=0
+for (let rowIndex  = 2; rowIndex  <=3; rowIndex ++) {
+	for (let columnIndex = 3; columnIndex <=5; columnIndex++) {
+		sumFourthZone+=arr[rowIndex][columnIndex]
+	}
+}
+document.write(`Сума елементів у 4ій вказаній області: ${sumFourthZone}<br>`)
+
+// Задача 5. Суму парних рядків
+   //  0  1  2  3  4  5 
+   // [1, 2, 3, 4, 5, 6], // 0
+	// [6, 7, 8, 9, 1, 2], // 1
+	// [3, 4, 5, 6, 7, 8], // 2
+	// [9, 1, 2, 3, 4, 5], // 3
+let sumOfPairedRows = 0
+for (let rowIndex = 0; rowIndex <3; rowIndex+=2) {
+	for (let columnIndex = 0; columnIndex <=5; columnIndex++) {
+		sumOfPairedRows += arr[rowIndex][columnIndex]
+	}
+}
+document.write(`Сума парних рядків: ${sumOfPairedRows}<br>`)
+
+// Задача 6. Суму непарних стовпців
+let sumOfOddColumns = 0
+for (let rowIndex = 0; rowIndex <=3; rowIndex++) {
+for (let columnIndex = 1; columnIndex <=5; columnIndex+=2) {
+	sumOfOddColumns+=arr[rowIndex][columnIndex]
+}
+}
+document.write(`Сума непарних стовпців: ${sumOfOddColumns}<br>`)
+
+// Задача 7. У парних рядках – непарні стовпці, у непарних – парні.
+
+let sum=0
+for (let rowIndex  = 0; rowIndex  < arr.length; rowIndex ++) {
+let startColumnsIndex
+if(rowIndex % 2 ==0) startColumnsIndex=1
+else startColumnsIndex=0
+for (let columnIndex = startColumnsIndex; columnIndex < arr[0].length; columnIndex+=2) {
+sum+=arr[rowIndex][columnIndex]
+}
+}
+document.write(`У парних рядках – непарні стовпці, у непарних – парні:${sum}`)
+</script>
+ </main>
+</body>
+</html>
