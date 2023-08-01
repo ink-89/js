@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+//  Задача 6. Дано масив імен. Застосовуючи відповідне сортування та бінарний пошук визначити, 
+// чи є у масиві ім’я довжиною 5 символів і під яким індексом.
+let names = ['Olha', 'Oleksii','Iryna', 'Anna', 'Oleg', 'Andrii', 'Svitlana', 'Adam']
+names.sort()
+document.write(`${names}<br>`)
+
+function findName(arr, searchLength){
+	let start = 0
+	let end = arr.length-1
+	while(start<=end){
+		const middle = Math.floor((start+end)/2)
+		if(names[middle].length===searchLength) return middle
+		if(names[middle].length<searchLength) start=middle+1
+		if(names[middle].length>searchLength) end = middle -1
+	}
+return -1
+}
+let result = findName(names, 5)
+if(result!==-1) {document.write(`Iм'я довжиною 5 символів є у списку, та знаходиться під індексом: ${result}`)
+}else document.write('Такого імені немає')
+</script>
+ </main>
+</body>
+</html>
